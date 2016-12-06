@@ -8,9 +8,30 @@
 
 import UIKit
 import Social
+import Alamofire
+import AlamofireImage
 
 class DetailViewController: UIViewController {
   
+  @IBOutlet weak var imageView : UIImageView?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    self.setImage()
+  }
+  
+  func setImage() {
+    guard let imageView = imageView else {
+      return
+    }
+    Alamofire.request("https://maps.googleapis.com/maps/api/streetview?size=600x300&location=40.741895,-73.989308&heading=151.78&pitch=-0.76&key=AIzaSyAVo_kku4oCd5qN-pyevtmh8_eqgzWZ82s").responseImage { response in
+      
+      if let image = response.result.value {
+        imageView.image = image
+      }
+    }
+  }
   
   @IBAction func closePressed() {
     self.dismiss(animated: true, completion: nil)

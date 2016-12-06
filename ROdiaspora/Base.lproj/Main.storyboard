@@ -99,22 +99,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ST5-vi-mkr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOTO google street view" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHv-jf-ueW">
-                                        <rect key="frame" x="133" y="48" width="109" height="52"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="Mas-xg-JgD"/>
-                                            <constraint firstAttribute="width" constant="109" id="c6c-Tr-qhU"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pCt-V0-J95">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="CHv-jf-ueW" firstAttribute="centerX" secondItem="ST5-vi-mkr" secondAttribute="centerX" id="1b9-Hk-VRH"/>
-                                    <constraint firstItem="CHv-jf-ueW" firstAttribute="centerY" secondItem="ST5-vi-mkr" secondAttribute="centerY" id="Vtk-p5-8rd"/>
+                                    <constraint firstItem="pCt-V0-J95" firstAttribute="top" secondItem="ST5-vi-mkr" secondAttribute="top" id="01U-WS-sQv"/>
+                                    <constraint firstItem="pCt-V0-J95" firstAttribute="leading" secondItem="ST5-vi-mkr" secondAttribute="leading" id="2DG-rS-fIi"/>
+                                    <constraint firstAttribute="bottom" secondItem="pCt-V0-J95" secondAttribute="bottom" id="nUe-IZ-VhB"/>
                                     <constraint firstAttribute="width" secondItem="ST5-vi-mkr" secondAttribute="height" multiplier="375:148" id="nfL-oc-dEK"/>
+                                    <constraint firstAttribute="trailing" secondItem="pCt-V0-J95" secondAttribute="trailing" id="yY0-Vz-mqb"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgZ-n7-nkT">
@@ -296,6 +291,9 @@
                             <constraint firstItem="TYl-E9-zb5" firstAttribute="leading" secondItem="H0c-Ln-OG7" secondAttribute="trailing" constant="8" id="zMZ-RX-tYA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="pCt-V0-J95" id="8aw-lx-UmP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kz2-9c-sKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,7 @@
 
 import UIKit
 import GLKit
+import SwiftyJSON
 
 // NOTE: NTMapView is imported through 'bridging header' (hellomap3swift-Bridging-Header.h)
 class ViewController: GLKViewController {
@@ -59,7 +60,9 @@ class ViewController: GLKViewController {
     }
     markerStyleBuilder.setBitmap(markerBitmap)
     markerStyleBuilder.setSize(30)
-    let sharedMarkerStyle = markerStyleBuilder.buildStyle()
+    guard let sharedMarkerStyle = markerStyleBuilder.buildStyle()else  {
+      return
+    }
 
     // Initialize a local vector data source
     guard let vectorDataSource = NTLocalVectorDataSource(projection:proj) else {
@@ -70,6 +73,9 @@ class ViewController: GLKViewController {
     let pos = proj.fromWgs84(NTMapPos(x:24.646469, y:59.426939)) // Tallinn
     let marker = NTMarker(pos:pos, style:sharedMarkerStyle)
     vectorDataSource.add(marker)
+    
+    // here
+    self.readGeoJson(name: "capitals_3857", forMap: mapView, intoDataSource: vectorDataSource, sharedMarkerStyle: sharedMarkerStyle)
 
     // Initialize a vector layer with the previous data source
     let vectorLayer = NTVectorLayer(dataSource:vectorDataSource)
@@ -94,5 +100,67 @@ class ViewController: GLKViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+  
+  private func readGeoJson(name: String, forMap map: NTMapView, intoDataSource dataSource: NTLocalVectorDataSource, sharedMarkerStyle: NTMarkerStyle) {
+    let fullPath = Bundle.main.path(forResource: name, ofType: "json")
+    
+    guard let path = fullPath else {
+      return
+    }
+    
+//    guard let inputStream = InputStream(fileAtPath: path) else {
+//      return
+//    }
+//    inputStream.open()
+    
+    guard let data = NSData(contentsOfFile: path) else {
+      return
+    }
+    
+    let geoJsonReader = NTGeoJSONGeometryReader()
+//    let balloonPopupStyleBuilder = NTBalloonPopupStyleBuilder()
+    
+//    var json = JSON(inputStream)
+    var parsingError: NSError?
+    let json = JSON(data: data as Data, error: &parsingError)
+    
+    DLog(object: parsingError)
+
+    var i = 0
+    
+    if let features = json["features"].array {
+      
+      for feature in features {
+        i += 1
+        guard let geometry = feature["geometry"].dictionary else {
+          return
+        }
+////        let properties = feature["properties"].dictionary
+//        
+
+//        
+//        let geometryJson = JSON(data: dataToConvert!)
+        
+//        guard var jsonData: NSData = JSONSerialization.dataWithJSONObject(geometry, options: JSONSerialization.WritingOptions.PrettyPrinted, error: error) else {
+//          return
+//        }
+//        NSString(data: jsonData, encoding: NSUTF8StringEncoding)! as String
+//        let geom = geoJsonReader?.readGeometry(geometryJson.string)
+
+//        let name = properties["Capital"].string
+//        let country = properties["Country"].string
+        
+//        let marker = NTMarker(geometry: geom, style: sharedMarkerStyle)
+//        dataSource.add(marker)
+      }
+      DLog(object: "Added \(i) features")
+    }
+    else {
+      DLog(object: "Failed. File not found")
+    }
+  }
 }
+
+
+
 

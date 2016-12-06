@@ -14,6 +14,8 @@
 		1B711A811DF6EEC900A476CD /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F9C31DF6D2C9001DDA4C /* Cartography.framework */; };
 		1B711A821DF6EEC900A476CD /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F9C41DF6D2C9001DDA4C /* AlamofireImage.framework */; };
 		1B711A831DF6EEC900A476CD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F9C51DF6D2C9001DDA4C /* Alamofire.framework */; };
+		1B88CDB61DF703C500C267BB /* Nuti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B88CDB51DF703C500C267BB /* Nuti.framework */; };
+		1B9A3ACF1DF711D400E365C9 /* capitals_3857.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B9A3ACE1DF711D400E365C9 /* capitals_3857.json */; };
 		1BD9F8CF1DF5BC4E001DDA4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F8CE1DF5BC4E001DDA4C /* AppDelegate.swift */; };
 		1BD9F8D11DF5BC4E001DDA4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F8D01DF5BC4E001DDA4C /* ViewController.swift */; };
 		1BD9F8D41DF5BC4E001DDA4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD9F8D21DF5BC4E001DDA4C /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B88CDB51DF703C500C267BB /* Nuti.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuti.framework; path = Carthage/Build/iOS/Nuti.framework; sourceTree = "<group>"; };
+		1B9A3ACE1DF711D400E365C9 /* capitals_3857.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = capitals_3857.json; sourceTree = "<group>"; };
 		1BD9F8CB1DF5BC4E001DDA4C /* ROdiaspora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ROdiaspora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD9F8CE1DF5BC4E001DDA4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BD9F8D01DF5BC4E001DDA4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +49,6 @@
 		1BD9F8DA1DF5BC4E001DDA4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BD9F8E11DF5BDA5001DDA4C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		1BD9F8E31DF5BDB4001DDA4C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		1BD9F8E61DF5BE4E001DDA4C /* Nuti.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nuti.framework; sourceTree = "<group>"; };
 		1BD9F8EA1DF5BECF001DDA4C /* ROdiaspora-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROdiaspora-Bridging-Header.h"; sourceTree = "<group>"; };
 		1BD9F8EB1DF5BF95001DDA4C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1BD9F8ED1DF5BFA6001DDA4C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,7 +69,6 @@
 		1BD9F9E31DF6D56A001DDA4C /* DataProvider+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataProvider+Network.swift"; sourceTree = "<group>"; };
 		1BD9F9E61DF6D5A8001DDA4C /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		1BD9F9E81DF6D5D6001DDA4C /* Request+Cancelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Request+Cancelable.swift"; sourceTree = "<group>"; };
-		1BEF39E01DF6F676005F756F /* Nuti.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuti.framework; path = Carthage/Build/Nuti.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B88CDB61DF703C500C267BB /* Nuti.framework in Frameworks */,
 				1B711A7D1DF6EEC900A476CD /* SwiftyJSON.framework in Frameworks */,
 				1B711A7E1DF6EEC900A476CD /* Reachability.framework in Frameworks */,
 				1B711A7F1DF6EEC900A476CD /* PopupDialog.framework in Frameworks */,
@@ -112,8 +115,8 @@
 		1BD9F8CD1DF5BC4E001DDA4C /* ROdiaspora */ = {
 			isa = PBXGroup;
 			children = (
-				1BD9F8F31DF5C165001DDA4C /* Classes */,
 				1BD9F8F51DF5C183001DDA4C /* SupportingFiles */,
+				1BD9F8F31DF5C165001DDA4C /* Classes */,
 			);
 			path = ROdiaspora;
 			sourceTree = "<group>";
@@ -121,7 +124,7 @@
 		1BD9F8E01DF5BDA5001DDA4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1BEF39E01DF6F676005F756F /* Nuti.framework */,
+				1B88CDB51DF703C500C267BB /* Nuti.framework */,
 				1BD9F9C11DF6D2C9001DDA4C /* Reachability.framework */,
 				1BD9F9C21DF6D2C9001DDA4C /* PopupDialog.framework */,
 				1BD9F9C31DF6D2C9001DDA4C /* Cartography.framework */,
@@ -133,7 +136,6 @@
 				1BD9F8EF1DF5BFAD001DDA4C /* CoreFoundation.framework */,
 				1BD9F8ED1DF5BFA6001DDA4C /* CoreGraphics.framework */,
 				1BD9F8EB1DF5BF95001DDA4C /* libc++.tbd */,
-				1BD9F8E61DF5BE4E001DDA4C /* Nuti.framework */,
 				1BD9F8E31DF5BDB4001DDA4C /* libz.tbd */,
 				1BD9F8E11DF5BDA5001DDA4C /* GLKit.framework */,
 			);
@@ -163,6 +165,7 @@
 		1BD9F8F51DF5C183001DDA4C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1B9A3ACE1DF711D400E365C9 /* capitals_3857.json */,
 				1BD9F8D51DF5BC4E001DDA4C /* Assets.xcassets */,
 				1BD9F8DA1DF5BC4E001DDA4C /* Info.plist */,
 				1BD9F8EA1DF5BECF001DDA4C /* ROdiaspora-Bridging-Header.h */,
@@ -282,6 +285,7 @@
 				1BD9F8D91DF5BC4E001DDA4C /* LaunchScreen.storyboard in Resources */,
 				1BD9F8D61DF5BC4E001DDA4C /* Assets.xcassets in Resources */,
 				1BD9F8D41DF5BC4E001DDA4C /* Main.storyboard in Resources */,
+				1B9A3ACF1DF711D400E365C9 /* capitals_3857.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
