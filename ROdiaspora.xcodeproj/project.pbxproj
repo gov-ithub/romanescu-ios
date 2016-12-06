@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B711A7D1DF6EEC900A476CD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F9C81DF6D2C9001DDA4C /* SwiftyJSON.framework */; };
+		1B711A7E1DF6EEC900A476CD /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F9C11DF6D2C9001DDA4C /* Reachability.framework */; };
+		1B711A7F1DF6EEC900A476CD /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F9C21DF6D2C9001DDA4C /* PopupDialog.framework */; };
+		1B711A801DF6EEC900A476CD /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F9C91DF6D2C9001DDA4C /* MagicalRecord.framework */; };
+		1B711A811DF6EEC900A476CD /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F9C31DF6D2C9001DDA4C /* Cartography.framework */; };
+		1B711A821DF6EEC900A476CD /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F9C41DF6D2C9001DDA4C /* AlamofireImage.framework */; };
+		1B711A831DF6EEC900A476CD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F9C51DF6D2C9001DDA4C /* Alamofire.framework */; };
+		1BD9F8CF1DF5BC4E001DDA4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F8CE1DF5BC4E001DDA4C /* AppDelegate.swift */; };
+		1BD9F8D11DF5BC4E001DDA4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F8D01DF5BC4E001DDA4C /* ViewController.swift */; };
+		1BD9F8D41DF5BC4E001DDA4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD9F8D21DF5BC4E001DDA4C /* Main.storyboard */; };
+		1BD9F8D61DF5BC4E001DDA4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BD9F8D51DF5BC4E001DDA4C /* Assets.xcassets */; };
+		1BD9F8D91DF5BC4E001DDA4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD9F8D71DF5BC4E001DDA4C /* LaunchScreen.storyboard */; };
+		1BD9F8E21DF5BDA5001DDA4C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F8E11DF5BDA5001DDA4C /* GLKit.framework */; };
+		1BD9F8E41DF5BDB4001DDA4C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F8E31DF5BDB4001DDA4C /* libz.tbd */; };
+		1BD9F8EC1DF5BF95001DDA4C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F8EB1DF5BF95001DDA4C /* libc++.tbd */; };
+		1BD9F8EE1DF5BFA6001DDA4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F8ED1DF5BFA6001DDA4C /* CoreGraphics.framework */; };
+		1BD9F8F01DF5BFAD001DDA4C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD9F8EF1DF5BFAD001DDA4C /* CoreFoundation.framework */; };
+		1BD9F8F21DF5C158001DDA4C /* MapListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F8F11DF5C158001DDA4C /* MapListener.swift */; };
+		1BD9F9B91DF69DBF001DDA4C /* nutibright-v3.zip in Resources */ = {isa = PBXBuildFile; fileRef = 1BD9F9B81DF69DBF001DDA4C /* nutibright-v3.zip */; };
+		1BD9F9BD1DF6AD0B001DDA4C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F9BC1DF6AD0B001DDA4C /* DetailViewController.swift */; };
+		1BD9F9C01DF6C789001DDA4C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F9BF1DF6C789001DDA4C /* DataProvider.swift */; };
+		1BD9F9DE1DF6D49D001DDA4C /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F9DD1DF6D49D001DDA4C /* CoreDataStore.swift */; };
+		1BD9F9E21DF6D531001DDA4C /* ROdiaspora.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F9E01DF6D531001DDA4C /* ROdiaspora.xcdatamodeld */; };
+		1BD9F9E41DF6D56A001DDA4C /* DataProvider+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F9E31DF6D56A001DDA4C /* DataProvider+Network.swift */; };
+		1BD9F9E71DF6D5A8001DDA4C /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F9E61DF6D5A8001DDA4C /* Logging.swift */; };
+		1BD9F9E91DF6D5D6001DDA4C /* Request+Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9F9E81DF6D5D6001DDA4C /* Request+Cancelable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1BD9F8CB1DF5BC4E001DDA4C /* ROdiaspora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ROdiaspora.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD9F8CE1DF5BC4E001DDA4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1BD9F8D01DF5BC4E001DDA4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1BD9F8D31DF5BC4E001DDA4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1BD9F8D51DF5BC4E001DDA4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BD9F8D81DF5BC4E001DDA4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1BD9F8DA1DF5BC4E001DDA4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BD9F8E11DF5BDA5001DDA4C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		1BD9F8E31DF5BDB4001DDA4C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1BD9F8E61DF5BE4E001DDA4C /* Nuti.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nuti.framework; sourceTree = "<group>"; };
+		1BD9F8EA1DF5BECF001DDA4C /* ROdiaspora-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ROdiaspora-Bridging-Header.h"; sourceTree = "<group>"; };
+		1BD9F8EB1DF5BF95001DDA4C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		1BD9F8ED1DF5BFA6001DDA4C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1BD9F8EF1DF5BFAD001DDA4C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		1BD9F8F11DF5C158001DDA4C /* MapListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListener.swift; sourceTree = "<group>"; };
+		1BD9F9B81DF69DBF001DDA4C /* nutibright-v3.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutibright-v3.zip"; path = "ROdiaspora/nutibright-v3.zip"; sourceTree = "<group>"; };
+		1BD9F9BC1DF6AD0B001DDA4C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1BD9F9BF1DF6C789001DDA4C /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		1BD9F9C11DF6D2C9001DDA4C /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
+		1BD9F9C21DF6D2C9001DDA4C /* PopupDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PopupDialog.framework; path = Carthage/Build/iOS/PopupDialog.framework; sourceTree = "<group>"; };
+		1BD9F9C31DF6D2C9001DDA4C /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
+		1BD9F9C41DF6D2C9001DDA4C /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		1BD9F9C51DF6D2C9001DDA4C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		1BD9F9C81DF6D2C9001DDA4C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		1BD9F9C91DF6D2C9001DDA4C /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/iOS/MagicalRecord.framework; sourceTree = "<group>"; };
+		1BD9F9DD1DF6D49D001DDA4C /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		1BD9F9E11DF6D531001DDA4C /* ROdiaspora.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ROdiaspora.xcdatamodel; sourceTree = "<group>"; };
+		1BD9F9E31DF6D56A001DDA4C /* DataProvider+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataProvider+Network.swift"; sourceTree = "<group>"; };
+		1BD9F9E61DF6D5A8001DDA4C /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		1BD9F9E81DF6D5D6001DDA4C /* Request+Cancelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Request+Cancelable.swift"; sourceTree = "<group>"; };
+		1BEF39E01DF6F676005F756F /* Nuti.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuti.framework; path = Carthage/Build/Nuti.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BD9F8C81DF5BC4E001DDA4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B711A7D1DF6EEC900A476CD /* SwiftyJSON.framework in Frameworks */,
+				1B711A7E1DF6EEC900A476CD /* Reachability.framework in Frameworks */,
+				1B711A7F1DF6EEC900A476CD /* PopupDialog.framework in Frameworks */,
+				1B711A801DF6EEC900A476CD /* MagicalRecord.framework in Frameworks */,
+				1B711A811DF6EEC900A476CD /* Cartography.framework in Frameworks */,
+				1B711A821DF6EEC900A476CD /* AlamofireImage.framework in Frameworks */,
+				1B711A831DF6EEC900A476CD /* Alamofire.framework in Frameworks */,
+				1BD9F8F01DF5BFAD001DDA4C /* CoreFoundation.framework in Frameworks */,
+				1BD9F8EE1DF5BFA6001DDA4C /* CoreGraphics.framework in Frameworks */,
+				1BD9F8EC1DF5BF95001DDA4C /* libc++.tbd in Frameworks */,
+				1BD9F8E41DF5BDB4001DDA4C /* libz.tbd in Frameworks */,
+				1BD9F8E21DF5BDA5001DDA4C /* GLKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BD9F8C21DF5BC4E001DDA4C = {
+			isa = PBXGroup;
+			children = (
+				1BD9F8CD1DF5BC4E001DDA4C /* ROdiaspora */,
+				1BD9F8CC1DF5BC4E001DDA4C /* Products */,
+				1BD9F8E01DF5BDA5001DDA4C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1BD9F8CC1DF5BC4E001DDA4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9F8CB1DF5BC4E001DDA4C /* ROdiaspora.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BD9F8CD1DF5BC4E001DDA4C /* ROdiaspora */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9F8F31DF5C165001DDA4C /* Classes */,
+				1BD9F8F51DF5C183001DDA4C /* SupportingFiles */,
+			);
+			path = ROdiaspora;
+			sourceTree = "<group>";
+		};
+		1BD9F8E01DF5BDA5001DDA4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BEF39E01DF6F676005F756F /* Nuti.framework */,
+				1BD9F9C11DF6D2C9001DDA4C /* Reachability.framework */,
+				1BD9F9C21DF6D2C9001DDA4C /* PopupDialog.framework */,
+				1BD9F9C31DF6D2C9001DDA4C /* Cartography.framework */,
+				1BD9F9C41DF6D2C9001DDA4C /* AlamofireImage.framework */,
+				1BD9F9C51DF6D2C9001DDA4C /* Alamofire.framework */,
+				1BD9F9C81DF6D2C9001DDA4C /* SwiftyJSON.framework */,
+				1BD9F9C91DF6D2C9001DDA4C /* MagicalRecord.framework */,
+				1BD9F9B81DF69DBF001DDA4C /* nutibright-v3.zip */,
+				1BD9F8EF1DF5BFAD001DDA4C /* CoreFoundation.framework */,
+				1BD9F8ED1DF5BFA6001DDA4C /* CoreGraphics.framework */,
+				1BD9F8EB1DF5BF95001DDA4C /* libc++.tbd */,
+				1BD9F8E61DF5BE4E001DDA4C /* Nuti.framework */,
+				1BD9F8E31DF5BDB4001DDA4C /* libz.tbd */,
+				1BD9F8E11DF5BDA5001DDA4C /* GLKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1BD9F8F31DF5C165001DDA4C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9F8F41DF5C177001DDA4C /* IB */,
+				1BD9F9BB1DF6ACDE001DDA4C /* Main */,
+				1BD9F9BE1DF6C77B001DDA4C /* Data */,
+				1BD9F9E51DF6D594001DDA4C /* Extras */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1BD9F8F41DF5C177001DDA4C /* IB */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9F8D21DF5BC4E001DDA4C /* Main.storyboard */,
+				1BD9F8D71DF5BC4E001DDA4C /* LaunchScreen.storyboard */,
+			);
+			name = IB;
+			sourceTree = "<group>";
+		};
+		1BD9F8F51DF5C183001DDA4C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9F8D51DF5BC4E001DDA4C /* Assets.xcassets */,
+				1BD9F8DA1DF5BC4E001DDA4C /* Info.plist */,
+				1BD9F8EA1DF5BECF001DDA4C /* ROdiaspora-Bridging-Header.h */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1BD9F9BB1DF6ACDE001DDA4C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9F8CE1DF5BC4E001DDA4C /* AppDelegate.swift */,
+				1BD9F8D01DF5BC4E001DDA4C /* ViewController.swift */,
+				1BD9F9BC1DF6AD0B001DDA4C /* DetailViewController.swift */,
+				1BD9F8F11DF5C158001DDA4C /* MapListener.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		1BD9F9BE1DF6C77B001DDA4C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9F9EA1DF6D5E5001DDA4C /* Provider */,
+				1BD9F9DF1DF6D4C0001DDA4C /* CoreData */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		1BD9F9DF1DF6D4C0001DDA4C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9F9E01DF6D531001DDA4C /* ROdiaspora.xcdatamodeld */,
+				1BD9F9DD1DF6D49D001DDA4C /* CoreDataStore.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		1BD9F9E51DF6D594001DDA4C /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9F9E81DF6D5D6001DDA4C /* Request+Cancelable.swift */,
+				1BD9F9E61DF6D5A8001DDA4C /* Logging.swift */,
+			);
+			name = Extras;
+			sourceTree = "<group>";
+		};
+		1BD9F9EA1DF6D5E5001DDA4C /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9F9BF1DF6C789001DDA4C /* DataProvider.swift */,
+				1BD9F9E31DF6D56A001DDA4C /* DataProvider+Network.swift */,
+			);
+			name = Provider;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BD9F8CA1DF5BC4E001DDA4C /* ROdiaspora */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BD9F8DD1DF5BC4E001DDA4C /* Build configuration list for PBXNativeTarget "ROdiaspora" */;
+			buildPhases = (
+				1BD9F8C71DF5BC4E001DDA4C /* Sources */,
+				1BD9F8C81DF5BC4E001DDA4C /* Frameworks */,
+				1BD9F8C91DF5BC4E001DDA4C /* Resources */,
+				1BD9F9BA1DF6A6CA001DDA4C /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ROdiaspora;
+			productName = ROdiaspora;
+			productReference = 1BD9F8CB1DF5BC4E001DDA4C /* ROdiaspora.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BD9F8C31DF5BC4E001DDA4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = WIP;
+				TargetAttributes = {
+					1BD9F8CA1DF5BC4E001DDA4C = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 68GGYM838K;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1BD9F8C61DF5BC4E001DDA4C /* Build configuration list for PBXProject "ROdiaspora" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BD9F8C21DF5BC4E001DDA4C;
+			productRefGroup = 1BD9F8CC1DF5BC4E001DDA4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BD9F8CA1DF5BC4E001DDA4C /* ROdiaspora */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BD9F8C91DF5BC4E001DDA4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD9F9B91DF69DBF001DDA4C /* nutibright-v3.zip in Resources */,
+				1BD9F8D91DF5BC4E001DDA4C /* LaunchScreen.storyboard in Resources */,
+				1BD9F8D61DF5BC4E001DDA4C /* Assets.xcassets in Resources */,
+				1BD9F8D41DF5BC4E001DDA4C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BD9F9BA1DF6A6CA001DDA4C /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Cartography.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PopupDialog.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MagicalRecord.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BD9F8C71DF5BC4E001DDA4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD9F9E21DF6D531001DDA4C /* ROdiaspora.xcdatamodeld in Sources */,
+				1BD9F9DE1DF6D49D001DDA4C /* CoreDataStore.swift in Sources */,
+				1BD9F8D11DF5BC4E001DDA4C /* ViewController.swift in Sources */,
+				1BD9F8CF1DF5BC4E001DDA4C /* AppDelegate.swift in Sources */,
+				1BD9F9C01DF6C789001DDA4C /* DataProvider.swift in Sources */,
+				1BD9F9E91DF6D5D6001DDA4C /* Request+Cancelable.swift in Sources */,
+				1BD9F8F21DF5C158001DDA4C /* MapListener.swift in Sources */,
+				1BD9F9BD1DF6AD0B001DDA4C /* DetailViewController.swift in Sources */,
+				1BD9F9E71DF6D5A8001DDA4C /* Logging.swift in Sources */,
+				1BD9F9E41DF6D56A001DDA4C /* DataProvider+Network.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1BD9F8D21DF5BC4E001DDA4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BD9F8D31DF5BC4E001DDA4C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1BD9F8D71DF5BC4E001DDA4C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BD9F8D81DF5BC4E001DDA4C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1BD9F8DB1DF5BC4E001DDA4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BD9F8DC1DF5BC4E001DDA4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BD9F8DE1DF5BC4E001DDA4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 68GGYM838K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build",
+				);
+				INFOPLIST_FILE = ROdiaspora/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ro.wip.ROdiaspora;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ROdiaspora/ROdiaspora-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1BD9F8DF1DF5BC4E001DDA4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 68GGYM838K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build",
+				);
+				INFOPLIST_FILE = ROdiaspora/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ro.wip.ROdiaspora;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ROdiaspora/ROdiaspora-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BD9F8C61DF5BC4E001DDA4C /* Build configuration list for PBXProject "ROdiaspora" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD9F8DB1DF5BC4E001DDA4C /* Debug */,
+				1BD9F8DC1DF5BC4E001DDA4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BD9F8DD1DF5BC4E001DDA4C /* Build configuration list for PBXNativeTarget "ROdiaspora" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD9F8DE1DF5BC4E001DDA4C /* Debug */,
+				1BD9F8DF1DF5BC4E001DDA4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1BD9F9E01DF6D531001DDA4C /* ROdiaspora.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1BD9F9E11DF6D531001DDA4C /* ROdiaspora.xcdatamodel */,
+			);
+			currentVersion = 1BD9F9E11DF6D531001DDA4C /* ROdiaspora.xcdatamodel */;
+			path = ROdiaspora.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1BD9F8C31DF5BC4E001DDA4C /* Project object */;
+}
