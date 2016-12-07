@@ -8,9 +8,15 @@
 
 import Foundation
 
+protocol MapListenerDelegate: class {
+  func didPressOnLocation(locationObject: LocationObject)
+}
+
 class MapListener: NTMapEventListener {
   
   var mapView: NTMapView?
+  
+  weak var delegate: MapListenerDelegate?
   
   convenience init(mapView_: NTMapView){
     self.init()
@@ -26,6 +32,14 @@ class MapListener: NTMapEventListener {
   // Map element is clicked. Can have many elements under same point
   override func onVectorElementClicked(_ vectorElementsClickInfo: NTVectorElementsClickInfo){
     NTLog.debug("clicked " + vectorElementsClickInfo.getVectorElementClickInfos().get(0).getVectorElement().description)
+    if let metadata = vectorElementsClickInfo.getVectorElementClickInfos().get(0).getVectorElement().getMetaData() {
+      NTLog.debug("capital " + metadata.get("capital") + " and country " + metadata.get("country"))
+      
+      if let capital = metadata.get("capital"), let country = metadata.get("country"), let latitude = Double(metadata.get("latitude")), let longitude = Double(metadata.get("longitude")) {
+       let locationObject = LocationObject(name: capital, country: country, latitude: NSNumber(value: latitude), longitude: NSNumber(value: longitude))
+        delegate?.didPressOnLocation(locationObject: locationObject)
+      }
+    }
   }
   
   // Map is clicked outside any vector element.

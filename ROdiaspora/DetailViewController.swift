@@ -14,18 +14,32 @@ import AlamofireImage
 class DetailViewController: UIViewController {
   
   @IBOutlet weak var imageView : UIImageView?
+  @IBOutlet weak var nameLabel : UILabel?
+  @IBOutlet weak var addressLabel : UILabel?
+  @IBOutlet weak var phoneLabel : UILabel?
+  @IBOutlet weak var scheduleLabel : UILabel?
+
+  var locationObject : LocationObject? = nil
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.setImage()
+    self.setup()
   }
   
-  func setImage() {
+  func setup() {
+    guard let locationObj = locationObject else {
+      return
+    }
+    
+    self.nameLabel?.text = "\(locationObj.name) din \(locationObj.country)"
+    
     guard let imageView = imageView else {
       return
     }
-    Alamofire.request("https://maps.googleapis.com/maps/api/streetview?size=600x300&location=40.741895,-73.989308&heading=151.78&pitch=-0.76&key=AIzaSyAVo_kku4oCd5qN-pyevtmh8_eqgzWZ82s").responseImage { response in
+    
+    // test with this : 40.741895,-73.989308 (NY)
+    Alamofire.request("https://maps.googleapis.com/maps/api/streetview?size=600x300&location=\(locationObj.latitude.doubleValue),\(locationObj.longitude.doubleValue)&heading=151.78&pitch=-0.76&key=AIzaSyAVo_kku4oCd5qN-pyevtmh8_eqgzWZ82s").responseImage { response in
       
       if let image = response.result.value {
         imageView.image = image

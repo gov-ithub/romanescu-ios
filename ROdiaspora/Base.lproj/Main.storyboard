@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ROdiaspora" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VCid" id="BYZ-38-t0r" customClass="MainViewController" customModule="ROdiaspora" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,7 +27,7 @@
                                 <rect key="frame" x="337" y="28" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="ZfA-Pm-T41" kind="presentation" id="9Pv-8R-mQL"/>
+                                    <segue destination="ZfA-Pm-T41" kind="presentation" identifier="pushDetail" id="9Pv-8R-mQL"/>
                                 </connections>
                             </button>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWG-L3-0Zi">
@@ -87,7 +87,7 @@
         <!--Detail View Controller-->
         <scene sceneID="87p-7Q-RME">
             <objects>
-                <viewController id="ZfA-Pm-T41" customClass="DetailViewController" customModule="ROdiaspora" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailVCid" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZfA-Pm-T41" customClass="DetailViewController" customModule="ROdiaspora" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="265-us-eNl"/>
                         <viewControllerLayoutGuide type="bottom" id="scD-3Q-zcf"/>
@@ -99,7 +99,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ST5-vi-mkr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pCt-V0-J95">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pCt-V0-J95">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
                                     </imageView>
                                 </subviews>
@@ -112,17 +112,6 @@
                                     <constraint firstAttribute="trailing" secondItem="pCt-V0-J95" secondAttribute="trailing" id="yY0-Vz-mqb"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgZ-n7-nkT">
-                                <rect key="frame" x="16" y="24" width="47" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="vj9-I9-mSE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Înapoi"/>
-                                <connections>
-                                    <action selector="closePressed" destination="ZfA-Pm-T41" eventType="touchUpInside" id="ZTm-YJ-GXx"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nume secție vot nr x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqJ-Bl-853">
                                 <rect key="frame" x="16" y="163" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
@@ -258,6 +247,19 @@
                                     <action selector="facebookSharePressed" destination="ZfA-Pm-T41" eventType="touchUpInside" id="i3o-tO-uUU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgZ-n7-nkT">
+                                <rect key="frame" x="16" y="24" width="47" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.16585057218309848" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="RfC-UE-4F8"/>
+                                    <constraint firstAttribute="height" constant="32" id="vj9-I9-mSE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Înapoi"/>
+                                <connections>
+                                    <action selector="closePressed" destination="ZfA-Pm-T41" eventType="touchUpInside" id="ZTm-YJ-GXx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -292,7 +294,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="Ecd-L2-9Eo" id="TXf-XQ-FXK"/>
                         <outlet property="imageView" destination="pCt-V0-J95" id="8aw-lx-UmP"/>
+                        <outlet property="nameLabel" destination="eqJ-Bl-853" id="Bb5-nv-bAE"/>
+                        <outlet property="phoneLabel" destination="r73-vo-eW0" id="sMc-Q3-M0D"/>
+                        <outlet property="scheduleLabel" destination="xFR-KT-gQN" id="Dz6-1t-iMa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kz2-9c-sKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
