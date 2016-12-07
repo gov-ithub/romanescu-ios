@@ -15,17 +15,11 @@ import MagicalRecord
 public typealias DataResponseHandler = (_ result: Any?, _ errorMessage: String?) -> Void
 
 enum ApiPath {
-  case Slopes
-  case Comments
-  case AdsList
-  case AdsCategories
+  case CallType
   
   func path() -> String {
     switch self {
-    case .Slopes: return "/slopes"
-    case .Comments: return "/comments"
-    case .AdsList: return "/ads/list"
-    case .AdsCategories: return "/ads/categories"
+    case .CallType: return "/call/type"
     }
   }
   
