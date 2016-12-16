@@ -38,8 +38,9 @@ class DetailViewController: UIViewController {
       return
     }
     
-    // test with this : 40.741895,-73.989308 (NY)
-    Alamofire.request("https://maps.googleapis.com/maps/api/streetview?size=600x300&location=\(locationObj.latitude.doubleValue),\(locationObj.longitude.doubleValue)&heading=151.78&pitch=-0.76&key=AIzaSyAVo_kku4oCd5qN-pyevtmh8_eqgzWZ82s").responseImage { response in
+    // test with this : 40.741895,-73.989308 (NY).
+    // heading compass from 0 to 360 (0=North), pitch - specifies the up or down angle of the camera (-down and + up)
+    Alamofire.request("https://maps.googleapis.com/maps/api/streetview?size=750x296&location=\(locationObj.latitude.doubleValue),\(locationObj.longitude.doubleValue)&heading=151.78&pitch=5&key=AIzaSyAVo_kku4oCd5qN-pyevtmh8_eqgzWZ82s").responseImage { response in
       
       if let image = response.result.value {
         imageView.image = image
@@ -73,7 +74,9 @@ class DetailViewController: UIViewController {
     if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
       
       let tweetShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-      
+      tweetShare.add(<#T##url: URL!##URL!#>)
+      tweetShare.add(<#T##image: UIImage!##UIImage!#>)
+      tweetShare.setInitialText(<#T##text: String!##String!#>)
       self.present(tweetShare, animated: true, completion: nil)
       
     } else {
